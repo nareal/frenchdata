@@ -13,3 +13,16 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Imports:
+    utils,
+    magrittr,
+    tibble,
+    dplyr,
+    tidyr,
+    cli,
+    httr,
+    rvest (>= 0.99.0.9000),
+    stringr,
+    purrr,
+    assertthat,
+    rlang
