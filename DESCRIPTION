@@ -18,7 +18,7 @@ Imports:
     magrittr,
     tibble,
     dplyr,
-    tidyr,
+    tidyr (>= 1.0.0),
     cli,
     httr,
     rvest (>= 0.99.0.9000),
