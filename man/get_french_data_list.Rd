@@ -15,7 +15,7 @@ get_french_data_list(max_tries = 3, refresh = FALSE)
 An object of class \code{french_data_list} with the following elements:
 \itemize{
 \item \code{info} - holds the information about when and were the information was retrieved.
-\item \code{files_list} a tibble with with a list of files that can be downloaded, the tibble contains a \code{name}, \code{file_url} and \code{details_url} column.`
+\item \code{files_list} a tibble with with a list of files that can be downloaded, the tibble contains a \code{name}, \code{file_url} and \code{details_url} column.
 }
 }
 \description{
