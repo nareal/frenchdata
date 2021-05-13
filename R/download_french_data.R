@@ -165,7 +165,6 @@ download_french_data <- function(dataset_name,
   assertthat::assert_that(NROW(url_info) == 1,
                           msg = "There are more than one match to the  data set name, please verify the contents of the parameter `dataset_name`")
 
-
   link_to_file <- paste0(base_url, url_info$file_url[1])
 
   temp_file_name <- fs::file_temp(pattern =
@@ -200,6 +199,12 @@ download_french_data <- function(dataset_name,
         dplyr::group_by(.data$group) %>%
         dplyr::summarise(start = dplyr::first(.data$line) - 1,
                          end = dplyr::last(.data$line))
+
+      header_info <-
+        readr::read_lines(file_content,
+                          n_max = subsets$start[1] - 3) %>%
+        stringr::str_trim(side = "both") %>%
+        paste(collapse = " ")
 
       subsets <- subsets %>%
         dplyr::mutate(
@@ -245,7 +250,7 @@ download_french_data <- function(dataset_name,
   } else {
     results <-
       structure(list(
-        info = paste(
+        info = paste(header_info, "\n\n",
           "Information collected from:",
           link_to_file,
           "on",
