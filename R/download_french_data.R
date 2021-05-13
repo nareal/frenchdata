@@ -104,7 +104,7 @@ read_data <- function(skip, n_max, csv_file){
 #'
 #' @param dataset_name string with the data set name. Use `get_french_data_list()` to get the list of data sets available to download.
 #'
-#' @param path character. The file path to save the uncompressed downloaded file.
+#' @param path character. Should be a valid file name and path to save the uncompressed downloaded file.
 #'
 #' @param overwrite boolean. Overwrite an existing file?
 #'
