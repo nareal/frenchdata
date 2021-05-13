@@ -1,6 +1,6 @@
 Package: frenchdata
 Title: Download Data Sets from Kenneth's French Finance Data Library Site
-Version: 0.0.0.9100
+Version: 0.1.0.0
 Authors@R: 
     person(given = "Nelson",
            family = "Areal",
@@ -14,7 +14,7 @@ URL: https://nareal.github.io/frenchdata/,
     https://github.com/nareal/frenchdata
 BugReports: https://github.com/nareal/frenchdata/issues
 Depends: 
-    R (>= 3.1)
+    R (>= 3.3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
