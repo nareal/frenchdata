@@ -105,7 +105,9 @@ read_data <- function(skip, n_max, csv_file){
 #'
 #' @param dataset_name string with the data set name. Use `get_french_data_list()` to get the list of data sets available to download.
 #'
-#' @param path character. Should be a valid file name and path to save the compressed downloaded file.
+#' @param dir character. Should be a valid directory path where to save the compressed downloaded file.
+#'
+#' @param dest_file character. Should be a valid file name to save the compressed downloaded file. If `dir` is defined and `dest_file` is left empty, the original file name will be used.
 #'
 #' @param overwrite boolean. Overwrite an existing file?
 #'
@@ -124,7 +126,8 @@ read_data <- function(skip, n_max, csv_file){
 #'    ff_3f
 #' }
 download_french_data <- function(dataset_name,
-                                 path = NULL,
+                                 dir = NULL,
+                                 dest_file = NULL,
                                  overwrite = FALSE,
                                  max_tries = 3){
 
@@ -132,15 +135,19 @@ download_french_data <- function(dataset_name,
   assertthat::assert_that(is.character(dataset_name),
                           length(dataset_name) == 1)
 
-  if (!is.null(path)){
+  if (!is.null(dir)) {
     assertthat::assert_that(is.character(path),
                             length(path) == 1)
     assertthat::assert_that(assertthat::is.dir(fs::path_dir(path)))
     assertthat::assert_that(assertthat::is.writeable(fs::path_dir(path)))
-    assertthat::assert_that(assertthat::not_empty(fs::path_file(path)))
-    assertthat::assert_that(fs::file_exists(path) &&
-                            (overwrite == FALSE),
-                            msg = "File exists and overwrite is set to FALSE!")
+    if (!is.null(dest_file)) {
+      assertthat::assert_that(is.character(dest_file),
+                              length(dest_file) == 1)
+      if (fs::file_exists(file.path(dir, dest_file))) {
+        assertthat::assert_that(overwrite == TRUE,
+                                msg = "File exists and overwrite is set to FALSE!")
+      }
+    }
   }
 
   assertthat::assert_that(assertthat::is.flag(overwrite))
@@ -165,13 +172,24 @@ download_french_data <- function(dataset_name,
   assertthat::assert_that(NROW(url_info) == 1,
                           msg = "There are more than one match to the  data set name, please verify the contents of the parameter `dataset_name`")
 
+  if (!is.null(dir) &&
+      (is.null(dest_file) || !assertthat::not_empty(dest_file))) {
+    dest_file <- fs::path_file(url_info$file_url[1])
+    if (fs::file_exists(file.path(dir, dest_file))) {
+        assertthat::assert_that(overwrite == TRUE,
+                                msg = "File exists and overwrite is set to FALSE!")
+    }
+  }
+
   link_to_file <- paste0(base_url, url_info$file_url[1])
 
-  temp_file_name <- fs::file_temp(pattern =
-                                    fs::path_file(dataset_name) %>%
-                                    fs::path_ext_remove(),
-                                  tmp_dir = tempdir(),
-                                  ext = "zip")
+  temp_file_name <- fs::file_temp(
+    pattern =
+      fs::path_file(url_info$file_url[1]) %>%
+        fs::path_ext_remove(),
+    tmp_dir = tempdir(),
+    ext = "zip"
+  )
 
   trial <- 1
   success <- FALSE
@@ -216,10 +234,12 @@ download_french_data <- function(dataset_name,
                              file_content)) %>%
         dplyr::select(.data$name, .data$data)
 
-      if (!is.null(path)){
+      if (!is.null(dir)){
         fs::file_copy(path = temp_file_name,
-                      new_path = path,
+                      new_path = file.path(dir, dest_file),
                       overwrite = overwrite)
+        cli::cli_alert_info(paste("File writen to:",
+                            file.path(dir, dest_file)))
       }
 
       fs::file_delete(temp_file_name)
