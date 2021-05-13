@@ -4,10 +4,19 @@
     <loc>https://github.com/nareal/frenchdata/index.html</loc>
   </url>
   <url>
+    <loc>https://github.com/nareal/frenchdata/reference/browse_details_page.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/nareal/frenchdata/reference/browse_french_site.html</loc>
   </url>
   <url>
+    <loc>https://github.com/nareal/frenchdata/reference/download_french_data.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/nareal/frenchdata/reference/french_data_list-class.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/nareal/frenchdata/reference/french_dataset-class.html</loc>
   </url>
   <url>
     <loc>https://github.com/nareal/frenchdata/reference/frenchdata-package.html</loc>
@@ -17,5 +26,8 @@
   </url>
   <url>
     <loc>https://github.com/nareal/frenchdata/reference/print.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/nareal/frenchdata/reference/print.french_dataset.html</loc>
   </url>
 </urlset>

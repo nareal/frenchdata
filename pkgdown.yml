@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2021-05-12T14:06Z
+last_built: 2021-05-13T08:38Z
 urls:
   reference: https://github.com/nareal/frenchdata/reference
   article: https://github.com/nareal/frenchdata/articles
