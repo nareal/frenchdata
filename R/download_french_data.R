@@ -202,7 +202,7 @@ download_french_data <- function(dataset_name,
 
       header_info <-
         readr::read_lines(file_content,
-                          n_max = subsets$start[1] - 3) %>%
+                          n_max = subsets$start[1] - 2) %>%
         stringr::str_trim(side = "both") %>%
         paste(collapse = " ")
 
@@ -211,7 +211,7 @@ download_french_data <- function(dataset_name,
           name = purrr::map_chr(.data$start - 2, read_info,
                                 file_content),
           data = purrr::map2(.data$start - 1,
-                             .data$end - .data$start + 2,
+                             .data$end - .data$start,
                              read_data,
                              file_content)) %>%
         dplyr::select(.data$name, .data$data)
