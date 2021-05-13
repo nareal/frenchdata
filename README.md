@@ -5,12 +5,16 @@
 [![R-CMD-check](https://github.com/nareal/frenchdata/workflows/R-CMD-check/badge.svg)](https://github.com/nareal/frenchdata/actions)
 <!-- badges: end -->
 
-The goal of `frenchdata` is to provide functions to download and read data sets from Prof. Kenneth French data library. 
+The goal of `frenchdata` is to provide functions to download and read data sets from Prof. Kenneth French finance data library. 
 
 ## Installation
 
-You can install the development version of `frenchdata` directly from GitHub using
+Once on CRAN, install the package as usual:
+``` r
+install.packages("frenchdata")
+```
 
+You can install the development version of `frenchdata` directly from GitHub using:
 ``` r
 # install.packages("devtools")
 devtools::install_github("nareal/frenchdata")
