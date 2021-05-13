@@ -43,7 +43,7 @@ print.french_dataset <- function(x, ...) {
   cli::cli_h3("Kenneth's French data set")
   cli::cli_alert_info(x$info)
   cli::cli_text("")
-  cli::cli_alert_info(paste("For details on the data set call the function `open_details()` on this object"))
+  cli::cli_alert_info(paste("For details on the data set call the function `browse_details_page()` on this object"))
   cli::cli_h3("Subsets in the file:")
   print(x$subsets, ...)
 }
