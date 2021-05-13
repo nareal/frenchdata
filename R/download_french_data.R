@@ -67,7 +67,7 @@ print.french_dataset <- function(x, ...) {
 browse_details_page <- function(fds) {
 
   assertthat::assert_that(inherits(fds, "french_dataset"))
-  utils::browseURL(fds)
+  utils::browseURL(fds$details_url)
 
 }
 
