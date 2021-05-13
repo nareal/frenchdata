@@ -30,4 +30,6 @@ Imports:
     stringr,
     purrr,
     assertthat,
-    rlang
+    rlang,
+    fs,
+    readr

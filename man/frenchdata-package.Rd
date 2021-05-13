@@ -8,6 +8,15 @@
 \description{
 Download data sets from Kennet's French data library site, reads all the data substets in a file and returns them as a tibble or list.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://nareal.github.io/frenchdata/}
+  \item \url{https://github.com/nareal/frenchdata}
+  \item Report bugs at \url{https://github.com/nareal/frenchdata/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Nelson Areal \email{nareal@gmail.com} (\href{https://orcid.org/0000-0002-1157-0178}{ORCID})
 
