@@ -1,6 +1,6 @@
 Package: frenchdata
 Title: Download Data Sets from Kenneth's French Finance Data Library Site
-Version: 0.1.0.0
+Version: 0.1.0
 Authors@R: 
     person(given = "Nelson",
            family = "Areal",
