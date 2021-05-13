@@ -7,3 +7,4 @@
 ^\.github$
 ^index.md
 ^revdep$
+^cran-comments\.md$
