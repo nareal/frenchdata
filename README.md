@@ -2,6 +2,7 @@
 # frenchdata
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/nareal/frenchdata/workflows/R-CMD-check/badge.svg)](https://github.com/nareal/frenchdata/actions)
 <!-- badges: end -->
 
 The goal of `frenchdata` is to provide functions to download and read data sets from Prof. Kenneth French data library. 
