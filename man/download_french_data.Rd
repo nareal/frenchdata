@@ -14,7 +14,7 @@ download_french_data(
 \arguments{
 \item{dataset_name}{string with the data set name. Use \code{get_french_data_list()} to get the list of data sets available to download.}
 
-\item{path}{character. Should be a valid file name and path to save the uncompressed downloaded file.}
+\item{path}{character. Should be a valid file name and path to save the compressed downloaded file.}
 
 \item{overwrite}{boolean. Overwrite an existing file?}
 

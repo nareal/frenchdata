@@ -105,7 +105,7 @@ read_data <- function(skip, n_max, csv_file){
 #'
 #' @param dataset_name string with the data set name. Use `get_french_data_list()` to get the list of data sets available to download.
 #'
-#' @param path character. Should be a valid file name and path to save the uncompressed downloaded file.
+#' @param path character. Should be a valid file name and path to save the compressed downloaded file.
 #'
 #' @param overwrite boolean. Overwrite an existing file?
 #'
@@ -132,14 +132,16 @@ download_french_data <- function(dataset_name,
   assertthat::assert_that(is.character(dataset_name),
                           length(dataset_name) == 1)
 
-  assertthat::assert_that(is.character(path),
-                          length(path) == 1)
-  assertthat::assert_that(assertthat::is.dir(fs::path_dir(path)))
-  assertthat::assert_that(assertthat::is.writeable(fs::path_dir(path)))
-  assertthat::assert_that(assertthat::not_empty(fs::path_file(path)))
-  assertthat::assert_that(fs::file_exists(path) &&
-                          (overwrite == FALSE),
-                          msg = "File exists and overwrite is set to FALSE!")
+  if (!is.null(path)){
+    assertthat::assert_that(is.character(path),
+                            length(path) == 1)
+    assertthat::assert_that(assertthat::is.dir(fs::path_dir(path)))
+    assertthat::assert_that(assertthat::is.writeable(fs::path_dir(path)))
+    assertthat::assert_that(assertthat::not_empty(fs::path_file(path)))
+    assertthat::assert_that(fs::file_exists(path) &&
+                            (overwrite == FALSE),
+                            msg = "File exists and overwrite is set to FALSE!")
+  }
 
   assertthat::assert_that(assertthat::is.flag(overwrite))
   assertthat::assert_that(is.numeric(max_tries),
@@ -208,6 +210,12 @@ download_french_data <- function(dataset_name,
                              read_data,
                              file_content)) %>%
         dplyr::select(.data$name, .data$data)
+
+      if (!is.null(path)){
+        fs::file_copy(path = temp_file_name,
+                      new_path = path,
+                      overwrite = overwrite)
+      }
 
       fs::file_delete(temp_file_name)
 
