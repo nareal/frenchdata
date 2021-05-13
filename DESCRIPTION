@@ -9,7 +9,8 @@ Authors@R:
            comment = c(ORCID = "0000-0002-1157-0178"))
 Description: Download data sets from Kennet's French data library site, reads all the data substets in a file and returns them as a tibble or list.
 License: MIT + file LICENSE
-URL: https://github.com/nareal/frenchdata
+URL: https://nareal.github.io/frenchdata/, 
+    https://github.com/nareal/frenchdata
 BugReports: https://github.com/nareal/frenchdata/issues
 Depends: 
     R (>= 3.1)
