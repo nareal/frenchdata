@@ -49,6 +49,7 @@ NULL
 print.french_data_list <- function(x, ...) {
   cli::cli_h3("Kenneth's French data library")
   cli::cli_alert_info(x$info)
+  cli::cli_text("")
   cli::cli_h3("Files list")
   print(x$files_list, ...)
 }
