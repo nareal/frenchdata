@@ -136,10 +136,10 @@ download_french_data <- function(dataset_name,
                           length(dataset_name) == 1)
 
   if (!is.null(dir)) {
-    assertthat::assert_that(is.character(path),
-                            length(path) == 1)
-    assertthat::assert_that(assertthat::is.dir(fs::path_dir(path)))
-    assertthat::assert_that(assertthat::is.writeable(fs::path_dir(path)))
+    assertthat::assert_that(is.character(dir),
+                            length(dir) == 1)
+    assertthat::assert_that(assertthat::is.dir(fs::path_dir(dir)))
+    assertthat::assert_that(assertthat::is.writeable(fs::path_dir(dir)))
     if (!is.null(dest_file)) {
       assertthat::assert_that(is.character(dest_file),
                               length(dest_file) == 1)

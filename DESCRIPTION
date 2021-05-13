@@ -33,3 +33,9 @@ Imports:
     rlang,
     fs,
     readr
+Suggests: 
+    rmarkdown,
+    knitr,
+    lubridate,
+    ggplot2
+VignetteBuilder: knitr

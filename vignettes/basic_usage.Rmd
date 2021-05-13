@@ -1,0 +1,118 @@
+---
+title: "Basic Usage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Basic Usage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, message=FALSE}
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(frenchdata)
+library(ggplot2)
+```
+
+The `frenchdata` package provides functions to download the finance data sets provided by the [data library website](http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) of Prof. Kenneth French.
+
+We can visit the website using the function: 
+```{r eval=FALSE}
+browse_french_site()
+```
+this will open the page on your default browser.
+
+As a first step we get the list of data sets that are currently available to download:
+```{r}
+data_sets <- get_french_data_list()
+```
+
+The `get_french_data_list()` function returns an object of the S3 class `french_data_list`:
+```{r}
+data_sets
+```
+
+## Searching for a data set
+
+To download a data set we need to identify its name first from the list `data_sets` obtained previously. A simple way of performing this search is to use the `View()` function provided by RStudio on the `files_list` element that contains the the files list:
+
+```{r eval=FALSE}
+View(data_sets$files_list)
+```
+
+![Using the filter on Rstudio viewer](img/using_rstudio_viewer_to_filter.png){width=90%}
+
+and use the filter to narrow down the search, for instance if I'm looking for the 5 factors I can quickly identify the correct data set name.
+
+## Downloading a data set
+
+To download a specific data, for instance the monthly Fama/French 5 Factors (2x3) set we can use:
+```{r}
+ff_5_factors <- 
+  download_french_data("Fama/French 5 Factors (2x3)")
+```
+
+This will return an object of class `french_dataset`:
+```{r}
+ff_5_factors
+```
+
+The file contains two subsets of data:
+```{r}
+ff_5_factors$subsets
+```
+The first one is the default one and is unnamed, and the second one is on "Annual Factors: January-December". We can access the data on the first subset:
+
+```{r}
+monthly_ff_5_factors <- ff_5_factors$subsets$data[[1]]
+monthly_ff_5_factors
+```
+
+We can now browse use this data.frame directly, for instance, to plot all each of the factors and the risk-free rate overtime:
+```{r fig.width=7}
+monthly_ff_5_factors %>% 
+  mutate(date = ym(date)) %>% 
+  pivot_longer(cols = -date, 
+               names_to = "factor", 
+               values_to = "value") %>% 
+  ggplot(data = .,
+         mapping = aes(x = date, y = value, 
+                       group = factor, 
+                       color = factor)) +
+  geom_line() + 
+  labs(caption = "Source: Kenneth French Data Library") +
+  facet_wrap( ~ factor)
+```
+
+We can browse the details page for this specific data set using:
+```{r eval=FALSE}
+browse_details_page(ff_5_factors)
+```
+
+## Downloading and saving a data set
+
+We can also save the original uncompressed file when downloading and reading it, by specifying a valid path name:
+```{r eval=FALSE}
+ff_5_factors <- 
+  download_french_data("Fama/French 5 Factors (2x3)",
+                       dir = ".",
+                       dest_file = "fama_french_5_factors.zip")
+```
+This will download the file, read it, assign the result to the object  `ff_5_factors`, and save the results to the file `fama_french_5_factors.zip` on the current directory.
+
+If we prefer to use the original file name just leave the `dest_file` parameter unset:
+```{r eval=FALSE}
+ff_5_factors <- 
+  download_french_data("Fama/French 5 Factors (2x3)",
+                       dir = ".")
+```
+
+

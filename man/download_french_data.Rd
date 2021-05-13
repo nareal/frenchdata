@@ -6,7 +6,8 @@
 \usage{
 download_french_data(
   dataset_name,
-  path = NULL,
+  dir = NULL,
+  dest_file = NULL,
   overwrite = FALSE,
   max_tries = 3
 )
@@ -14,7 +15,9 @@ download_french_data(
 \arguments{
 \item{dataset_name}{string with the data set name. Use \code{get_french_data_list()} to get the list of data sets available to download.}
 
-\item{path}{character. Should be a valid file name and path to save the compressed downloaded file.}
+\item{dir}{character. Should be a valid directory path where to save the compressed downloaded file.}
+
+\item{dest_file}{character. Should be a valid file name to save the compressed downloaded file. If \code{dir} is defined and \code{dest_file} is left empty, the original file name will be used.}
 
 \item{overwrite}{boolean. Overwrite an existing file?}
 
