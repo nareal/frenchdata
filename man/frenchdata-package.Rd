@@ -4,9 +4,10 @@
 \name{frenchdata-package}
 \alias{frenchdata}
 \alias{frenchdata-package}
-\title{frenchdata: Download data sets from Kennet's French data library site}
+\title{frenchdata: Download Data Sets from Kenneth's French Finance Data Library Site}
 \description{
-Download data sets from Kennet's French data library site, reads all the data substets in a file and returns them as a tibble or list.
+Download data sets from Kenneth's French finance data library site, reads all the data subsets from the file. Allows R users to collect the data as
+    tidyverse-ready data frames.
 }
 \seealso{
 Useful links:
