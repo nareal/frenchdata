@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "nareal@gmail.com",
            comment = c(ORCID = "0000-0002-1157-0178"))
-Description: Download data sets from Kennet's French data library site, reads all the data substets in a file and returns them as a tibble or list.
+Description: Download data sets from Kenneth's French finance data library site <http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html>, reads all the data subsets from the file. Allows R users to collect the data as
 License: MIT + file LICENSE
 URL: https://nareal.github.io/frenchdata/, 
     https://github.com/nareal/frenchdata
