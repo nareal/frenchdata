@@ -24,20 +24,22 @@ NULL
 
 #' Generic print method for objects of class `french_dataset`
 #'
-#' Prints an object of class `french_dataset`
+#' Prints an object of class [`french_dataset`][french_dataset-class]
 #'
-#' @param x an object of class `french_dataset`
+#' @param x an object of class [`french_dataset`][french_dataset-class]
 #'
 #' @param ... other arguments passed to `print()`
 #'
 #' @method print french_dataset
+#'
+#' @return Return a `tbl_df`/`data.frame` class object from the `subsets` element of `x`.
+#'
 #' @export
-#'
 #' @examples
-#'
 #' \donttest{
-#'    ff_3f <- download_french_data('Fama/French 3 Factors')
-#'    ff_3f
+#' ff_3f <- download_french_data('Fama/French 3 Factors')
+#' print(ff_3f)
+#' ff_3f
 #' }
 print.french_dataset <- function(x, ...) {
   cli::cli_h3("Kenneth's French data set")
@@ -50,17 +52,18 @@ print.french_dataset <- function(x, ...) {
 
 
 
-#' Browse the details page of a Kenneth's French data set
+#' Browse the details webpage of a Kenneth's French data set
 #'
-#' Opens the details page of a data set on the default browser.
+#' Opens the details webpage of a data set on the default browser.
 #'
-#' @param fds an object of class `french_dataset`
+#' @param fds an object of class [`french_dataset`][french_dataset-class]
+#'
+#' @return Does not return a value. Opens the details webpage of a data set on the default browser window.
 #'
 #' @examples
-#'
 #' \donttest{
-#'    ff_3f <- download_french_data('Fama/French 3 Factors')
-#'    browse_details_page(ff_3f)
+#' ff_3f <- download_french_data('Fama/French 3 Factors')
+#' browse_details_page(ff_3f)
 #' }
 #'
 #' @export
@@ -113,7 +116,7 @@ read_data <- function(skip, n_max, csv_file){
 #'
 #' @param max_tries numeric. Number of file download trials.
 #'
-#' @return An objects of class `french_dataset` with the following elements:
+#' @return An objects of class [`french_dataset`][french_dataset-class] with the following elements:
 #'    * `info` - holds the information about when and were the information was retrieved.
 #'    * `details_url` - url for the webpage with details on data set.
 #'    * `subsets` a tibble with with the subsets contained in the downloaded file, the tibble contains a `name` and `data` column.
@@ -122,8 +125,8 @@ read_data <- function(skip, n_max, csv_file){
 #'
 #' @examples
 #' \donttest{
-#'    ff_3f <- download_french_data('Fama/French 3 Factors')
-#'    ff_3f
+#' ff_3f <- download_french_data('Fama/French 3 Factors')
+#' ff_3f
 #' }
 download_french_data <- function(dataset_name,
                                  dir = NULL,

@@ -24,7 +24,7 @@ download_french_data(
 \item{max_tries}{numeric. Number of file download trials.}
 }
 \value{
-An objects of class \code{french_dataset} with the following elements:
+An objects of class \code{\link[=french_dataset-class]{french_dataset}} with the following elements:
 \itemize{
 \item \code{info} - holds the information about when and were the information was retrieved.
 \item \code{details_url} - url for the webpage with details on data set.
@@ -36,7 +36,7 @@ Download the data set
 }
 \examples{
 \donttest{
-   ff_3f <- download_french_data('Fama/French 3 Factors')
-   ff_3f
+ff_3f <- download_french_data('Fama/French 3 Factors')
+ff_3f
 }
 }

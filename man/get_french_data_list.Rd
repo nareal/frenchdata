@@ -12,7 +12,7 @@ get_french_data_list(max_tries = 3, refresh = FALSE)
 \item{refresh}{logical. If TRUE re-downloads the page and overwrites the cached information. Otherwise use the cached data if a download has been done in the current session.}
 }
 \value{
-An object of class \code{french_data_list} with the following elements:
+An object of class \code{\link[=french_data_list-class]{french_data_list}} with the following elements:
 \itemize{
 \item \code{info} - holds the information about when and were the information was retrieved.
 \item \code{files_list} a tibble with with a list of files that can be downloaded, the tibble contains a \code{name}, \code{file_url} and \code{details_url} column.
@@ -22,10 +22,9 @@ An object of class \code{french_data_list} with the following elements:
 Extract the list of files along with a description and links to them and additional information from the data library page of Prof. Kenneth French website.
 }
 \examples{
-
 \donttest{
-   files_list <- get_french_data_list()
-   files_list
+files_list <- get_french_data_list()
+files_list
 }
 
 }

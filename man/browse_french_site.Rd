@@ -6,14 +6,16 @@
 \usage{
 browse_french_site()
 }
+\value{
+Does not return a value. Opens the Kenneth's French data library website with the default browser.
+}
 \description{
 Opens the data library website on the default browser
 \url{https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html}
 }
 \examples{
-
 \donttest{
-   browse_french_site()
+browse_french_site()
 }
 
 }

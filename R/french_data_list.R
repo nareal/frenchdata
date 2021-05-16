@@ -30,22 +30,23 @@ NULL
 
 #' Generic print method for objects of class `french_data_list`
 #'
-#' Prints an object of class `french_data_list`
+#' Prints an object of class [`french_data_list`][french_data_list-class]
 #'
-#' @param x an object of class `french_data_list`
+#' @param x an object of class [`french_data_list`][french_data_list-class]
 #'
 #' @param ... other arguments passed to `print()`
 #'
 #' @method print french_data_list
+#'
+#' @return Return a `tbl_df`/`data.frame` class object from the `files_list` element of `x`.
+#'
 #' @export
-#'
 #' @examples
-#'
 #' \donttest{
-#'    files_list <- get_french_data_list()
-#'    files_list
+#' files_list <- get_french_data_list()
+#' print(files_list)
+#' files_list
 #' }
-#' @rdname print
 print.french_data_list <- function(x, ...) {
   cli::cli_h3("Kenneth's French data library")
   cli::cli_alert_info(x$info)
@@ -59,10 +60,11 @@ print.french_data_list <- function(x, ...) {
 #' Opens the data library website on the default browser
 #' \url{https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html}
 #'
-#' @examples
+#' @return Does not return a value. Opens the Kenneth's French data library website with the default browser.
 #'
+#' @examples
 #' \donttest{
-#'    browse_french_site()
+#' browse_french_site()
 #' }
 #'
 #' @export
@@ -78,15 +80,14 @@ browse_french_site <- function() {
 #'
 #' @param refresh logical. If TRUE re-downloads the page and overwrites the cached information. Otherwise use the cached data if a download has been done in the current session.
 #'
-#' @return An object of class `french_data_list` with the following elements:
+#' @return An object of class [`french_data_list`][french_data_list-class] with the following elements:
 #'    * `info` - holds the information about when and were the information was retrieved.
 #'    * `files_list` a tibble with with a list of files that can be downloaded, the tibble contains a `name`, `file_url` and `details_url` column.
 #'
 #' @examples
-#'
 #' \donttest{
-#'    files_list <- get_french_data_list()
-#'    files_list
+#' files_list <- get_french_data_list()
+#' files_list
 #' }
 #'
 #' @export

@@ -7,17 +7,20 @@
 \method{print}{french_dataset}(x, ...)
 }
 \arguments{
-\item{x}{an object of class \code{french_dataset}}
+\item{x}{an object of class \code{\link[=french_dataset-class]{french_dataset}}}
 
 \item{...}{other arguments passed to \code{print()}}
 }
+\value{
+Return a \code{tbl_df}/\code{data.frame} class object from the \code{subsets} element of \code{x}.
+}
 \description{
-Prints an object of class \code{french_dataset}
+Prints an object of class \code{\link[=french_dataset-class]{french_dataset}}
 }
 \examples{
-
 \donttest{
-   ff_3f <- download_french_data('Fama/French 3 Factors')
-   ff_3f
+ff_3f <- download_french_data('Fama/French 3 Factors')
+print(ff_3f)
+ff_3f
 }
 }

@@ -7,17 +7,20 @@
 \method{print}{french_data_list}(x, ...)
 }
 \arguments{
-\item{x}{an object of class \code{french_data_list}}
+\item{x}{an object of class \code{\link[=french_data_list-class]{french_data_list}}}
 
 \item{...}{other arguments passed to \code{print()}}
 }
+\value{
+Return a \code{tbl_df}/\code{data.frame} class object from the \code{files_list} element of \code{x}.
+}
 \description{
-Prints an object of class \code{french_data_list}
+Prints an object of class \code{\link[=french_data_list-class]{french_data_list}}
 }
 \examples{
-
 \donttest{
-   files_list <- get_french_data_list()
-   files_list
+files_list <- get_french_data_list()
+print(files_list)
+files_list
 }
 }

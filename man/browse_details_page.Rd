@@ -2,21 +2,23 @@
 % Please edit documentation in R/download_french_data.R
 \name{browse_details_page}
 \alias{browse_details_page}
-\title{Browse the details page of a Kenneth's French data set}
+\title{Browse the details webpage of a Kenneth's French data set}
 \usage{
 browse_details_page(fds)
 }
 \arguments{
-\item{fds}{an object of class \code{french_dataset}}
+\item{fds}{an object of class \code{\link[=french_dataset-class]{french_dataset}}}
+}
+\value{
+Does not return a value. Opens the details webpage of a data set on the default browser window.
 }
 \description{
-Opens the details page of a data set on the default browser.
+Opens the details webpage of a data set on the default browser.
 }
 \examples{
-
 \donttest{
-   ff_3f <- download_french_data('Fama/French 3 Factors')
-   browse_details_page(ff_3f)
+ff_3f <- download_french_data('Fama/French 3 Factors')
+browse_details_page(ff_3f)
 }
 
 }
