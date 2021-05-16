@@ -41,7 +41,7 @@ NULL
 #'
 #' @examples
 #'
-#' \dontrun{
+#' \donttest{
 #'    files_list <- get_french_data_list()
 #'    files_list
 #' }
@@ -61,7 +61,7 @@ print.french_data_list <- function(x, ...) {
 #'
 #' @examples
 #'
-#' \dontrun{
+#' \donttest{
 #'    browse_french_site()
 #' }
 #'
@@ -84,7 +84,7 @@ browse_french_site <- function() {
 #'
 #' @examples
 #'
-#' \dontrun{
+#' \donttest{
 #'    files_list <- get_french_data_list()
 #'    files_list
 #' }

@@ -23,7 +23,7 @@ Extract the list of files along with a description and links to them and additio
 }
 \examples{
 
-\dontrun{
+\donttest{
    files_list <- get_french_data_list()
    files_list
 }

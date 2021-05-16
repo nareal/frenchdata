@@ -16,7 +16,7 @@ Prints an object of class \code{french_dataset}
 }
 \examples{
 
-\dontrun{
+\donttest{
    ff_3f <- download_french_data('Fama/French 3 Factors')
    ff_3f
 }

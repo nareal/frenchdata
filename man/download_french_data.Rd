@@ -35,7 +35,7 @@ An objects of class \code{french_dataset} with the following elements:
 Download the data set
 }
 \examples{
-\dontrun{
+\donttest{
    ff_3f <- download_french_data('Fama/French 3 Factors')
    ff_3f
 }

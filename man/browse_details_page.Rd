@@ -14,7 +14,7 @@ Opens the details page of a data set on the default browser.
 }
 \examples{
 
-\dontrun{
+\donttest{
    ff_3f <- download_french_data('Fama/French 3 Factors')
    browse_details_page(ff_3f)
 }

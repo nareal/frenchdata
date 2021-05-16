@@ -12,7 +12,7 @@ Opens the data library website on the default browser
 }
 \examples{
 
-\dontrun{
+\donttest{
    browse_french_site()
 }
 

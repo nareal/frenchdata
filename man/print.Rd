@@ -16,7 +16,7 @@ Prints an object of class \code{french_data_list}
 }
 \examples{
 
-\dontrun{
+\donttest{
    files_list <- get_french_data_list()
    files_list
 }
