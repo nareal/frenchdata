@@ -62,8 +62,10 @@ print.french_dataset <- function(x, ...) {
 #'
 #' @examples
 #' \donttest{
-#' ff_3f <- download_french_data('Fama/French 3 Factors')
-#' browse_details_page(ff_3f)
+#' if(interactive()){
+#'   ff_3f <- download_french_data('Fama/French 3 Factors')
+#'   browse_details_page(ff_3f)
+#' }
 #' }
 #'
 #' @export

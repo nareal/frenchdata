@@ -64,7 +64,9 @@ print.french_data_list <- function(x, ...) {
 #'
 #' @examples
 #' \donttest{
-#' browse_french_site()
+#' if(interactive()){
+#'   browse_french_site()
+#' }
 #' }
 #'
 #' @export

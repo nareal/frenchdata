@@ -15,7 +15,9 @@ Opens the data library website on the default browser
 }
 \examples{
 \donttest{
-browse_french_site()
+if(interactive()){
+  browse_french_site()
+}
 }
 
 }
