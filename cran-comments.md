@@ -1,3 +1,10 @@
+## Resubmission
+
+This is a resubmission. Thank you so much for the comments. In this version I have:
+
+* Added \value to .Rd files regarding exported methods and explained  the functions results in the documentation. Added internal links for some documentation pages. Renamed print.Rd to print.french_data_list.Rd  
+* Changed \dontrun{} to \donttest{} in function which download data.
+
 ## Test environments
 * local OS X install, R 4.0.4
 * ubuntu-gcc-release (r-release)
