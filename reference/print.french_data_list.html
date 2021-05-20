@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get list of files available on Kenneth's French data library website — get_french_data_list • frenchdata</title>
+<title>Generic print method for objects of class french_data_list — print.french_data_list • frenchdata</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Get list of files available on Kenneth's French data library website — get_french_data_list" />
-<meta property="og:description" content="Extract the list of files along with a description and links to them and additional information from the data library page of Prof. Kenneth French website." />
+<meta property="og:title" content="Generic print method for objects of class french_data_list — print.french_data_list" />
+<meta property="og:description" content="Prints an object of class french_data_list" />
 
 
 
@@ -123,42 +123,39 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get list of files available on Kenneth's French data library website</h1>
+    <h1>Generic print method for objects of class <code>french_data_list</code></h1>
     <small class="dont-index">Source: <a href='https://github.com/nareal/frenchdata/blob/master/R/french_data_list.R'><code>R/french_data_list.R</code></a></small>
-    <div class="hidden name"><code>get_french_data_list.Rd</code></div>
+    <div class="hidden name"><code>print.french_data_list.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Extract the list of files along with a description and links to them and additional information from the data library page of Prof. Kenneth French website.</p>
+    <p>Prints an object of class <code><a href='french_data_list-class.html'>french_data_list</a></code></p>
     </div>
 
-    <pre class="usage"><span class='fu'>get_french_data_list</span><span class='op'>(</span>max_tries <span class='op'>=</span> <span class='fl'>3</span>, refresh <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='co'># S3 method for french_data_list</span>
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>max_tries</th>
-      <td><p>a number defining the maximum number of tries to perform when downloading the page.</p></td>
+      <th>x</th>
+      <td><p>an object of class <code><a href='french_data_list-class.html'>french_data_list</a></code></p></td>
     </tr>
     <tr>
-      <th>refresh</th>
-      <td><p>logical. If TRUE re-downloads the page and overwrites the cached information. Otherwise use the cached data if a download has been done in the current session.</p></td>
+      <th>...</th>
+      <td><p>other arguments passed to <code><a href='https://rdrr.io/r/base/print.html'>print()</a></code></p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>An object of class <code><a href='french_data_list-class.html'>french_data_list</a></code> with the following elements:</p><ul>
-<li><p><code>info</code> - holds the information about when and were the information was retrieved.</p></li>
-<li><p><code>files_list</code> a tibble with with a list of files that can be downloaded, the tibble contains a <code>name</code>, <code>file_url</code> and <code>details_url</code> column.</p></li>
-</ul>
-
+    <p>Return a <code>tbl_df</code>/<code>data.frame</code> class object from the <code>files_list</code> element of <code>x</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='va'>files_list</span> <span class='op'>&lt;-</span> <span class='fu'>get_french_data_list</span><span class='op'>(</span><span class='op'>)</span>
-<span class='va'>files_list</span>
+<span class='va'>files_list</span> <span class='op'>&lt;-</span> <span class='fu'><a href='get_french_data_list.html'>get_french_data_list</a></span><span class='op'>(</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>files_list</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Kenneth's French data library </span></div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span><span> Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html on Thu May 20 12:34:23 2021</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Files list </span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 297 x 3</span><span>
 #&gt;    name                        file_url                   details_url           
 #&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                       </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                      </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                 
@@ -172,8 +169,21 @@
 #&gt; </span><span style='color: #BCBCBC;'> 8</span><span> Portfolios Formed on Size … ftp/Portfolios_Formed_on_… Data_Library/det_port…
 #&gt; </span><span style='color: #BCBCBC;'> 9</span><span> Portfolios Formed on Book-… ftp/Portfolios_Formed_on_… Data_Library/det_form…
 #&gt; </span><span style='color: #BCBCBC;'>10</span><span> Portfolios Formed on Book-… ftp/Portfolios_Formed_on_… Data_Library/det_form…
+#&gt; </span><span style='color: #949494;'># … with 287 more rows</span><span></div><div class='input'><span class='va'>files_list</span>
+</div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Kenneth's French data library </span></div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html on Thu May 20 12:34:23 2021</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Files list </span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 297 x 3</span><span>
+#&gt;    name                        file_url                   details_url           
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                       </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                      </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                 
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> Fama/French 3 Factors       ftp/F-F_Research_Data_Fac… Data_Library/f-f_fact…
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> Fama/French 3 Factors [Wee… ftp/F-F_Research_Data_Fac… Data_Library/f-f_fact…
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> Fama/French 3 Factors [Dai… ftp/F-F_Research_Data_Fac… Data_Library/f-f_fact…
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> Fama/French 5 Factors (2x3) ftp/F-F_Research_Data_5_F… Data_Library/f-f_5_fa…
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> Fama/French 5 Factors (2x3… ftp/F-F_Research_Data_5_F… Data_Library/f-f_5_fa…
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> Portfolios Formed on Size   ftp/Portfolios_Formed_on_… Data_Library/det_port…
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> Portfolios Formed on Size … ftp/Portfolios_Formed_on_… Data_Library/det_port…
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> Portfolios Formed on Size … ftp/Portfolios_Formed_on_… Data_Library/det_port…
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> Portfolios Formed on Book-… ftp/Portfolios_Formed_on_… Data_Library/det_form…
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> Portfolios Formed on Book-… ftp/Portfolios_Formed_on_… Data_Library/det_form…
 #&gt; </span><span style='color: #949494;'># … with 287 more rows</span><span></div><div class='input'><span class='co'># }</span>
-
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">frenchdata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9100</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -129,7 +129,7 @@
     </div>
 
     <div class="ref-description">
-    <p>Prints an object of class <code>french_dataset</code></p>
+    <p>Prints an object of class <code><a href='french_dataset-class.html'>french_dataset</a></code></p>
     </div>
 
     <pre class="usage"><span class='co'># S3 method for french_dataset</span>
@@ -140,7 +140,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>an object of class <code>french_dataset</code></p></td>
+      <td><p>an object of class <code><a href='french_dataset-class.html'>french_dataset</a></code></p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -148,14 +148,29 @@
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Return a <code>tbl_df</code>/<code>data.frame</code> class object from the <code>subsets</code> element of <code>x</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
-   <span class='va'>ff_3f</span> <span class='op'>&lt;-</span> <span class='fu'><a href='download_french_data.html'>download_french_data</a></span><span class='op'>(</span><span class='st'>'Fama/French 3 Factors'</span><span class='op'>)</span>
-   <span class='va'>ff_3f</span>
-<span class='op'>}</span>
-</div></pre>
+    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
+<span class='va'>ff_3f</span> <span class='op'>&lt;-</span> <span class='fu'><a href='download_french_data.html'>download_french_data</a></span><span class='op'>(</span><span class='st'>'Fama/French 3 Factors'</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>ff_3f</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Kenneth's French data set </span></div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span><span> This file was created by CMPT_ME_BEME_RETS using the 202103 CRSP database. The 1-month TBill return is from Ibbotson and Associates, Inc. </span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip on Thu May 20 12:34:24 2021</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> For details on the data set call the function `browse_details_page()` on this object</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Subsets in the file: </span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 2 x 2</span><span>
+#&gt;   name                               data                     
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                              </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span>                   
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> </span><span style='color: #949494;'>""</span><span>                                 </span><span style='color: #949494;'>&lt;spec_tbl_df [1,137 × 5]&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> </span><span style='color: #949494;'>"</span><span>Annual Factors: January-December</span><span style='color: #949494;'>"</span><span> </span><span style='color: #949494;'>&lt;spec_tbl_df [94 × 5]&gt;</span><span>   </div><div class='input'><span class='va'>ff_3f</span>
+</div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Kenneth's French data set </span></div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> This file was created by CMPT_ME_BEME_RETS using the 202103 CRSP database. The 1-month TBill return is from Ibbotson and Associates, Inc. </span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip on Thu May 20 12:34:24 2021</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>ℹ</span><span> For details on the data set call the function `browse_details_page()` on this object</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Subsets in the file: </span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 2 x 2</span><span>
+#&gt;   name                               data                     
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                              </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span>                   
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> </span><span style='color: #949494;'>""</span><span>                                 </span><span style='color: #949494;'>&lt;spec_tbl_df [1,137 × 5]&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> </span><span style='color: #949494;'>"</span><span>Annual Factors: January-December</span><span style='color: #949494;'>"</span><span> </span><span style='color: #949494;'>&lt;spec_tbl_df [94 × 5]&gt;</span><span>   </div><div class='input'><span class='co'># }</span>
+</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
