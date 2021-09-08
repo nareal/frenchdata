@@ -37,6 +37,12 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
 
 
 <meta property="og:title" content="Generic print method for objects of class french_data_list — print.french_data_list" />
@@ -112,6 +118,12 @@
 </li>
       </ul>
       
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -156,7 +168,7 @@
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
 <span class='va'>files_list</span> <span class='op'>&lt;-</span> <span class='fu'><a href='get_french_data_list.html'>get_french_data_list</a></span><span class='op'>(</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>files_list</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Kenneth's French data library </span></div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span> Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html on Wed Sep 08 17:18:50 2021</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Files list </span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 297 × 3</span>
+</div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Kenneth's French data library </span></div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span> Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html on Wed Sep 08 19:04:17 2021</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Files list </span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 297 × 3</span>
 #&gt;    name                                                file_url     details_url 
 #&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                                               <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>        <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>       
 #&gt; <span style='color: #BCBCBC;'> 1</span> Fama/French 3 Factors                               ftp/F-F_Res… Data_Librar…
@@ -170,7 +182,7 @@
 #&gt; <span style='color: #BCBCBC;'> 9</span> Portfolios Formed on Book-to-Market                 ftp/Portfol… Data_Librar…
 #&gt; <span style='color: #BCBCBC;'>10</span> Portfolios Formed on Book-to-Market [ex. Dividends] ftp/Portfol… Data_Librar…
 #&gt; <span style='color: #949494;'># … with 287 more rows</span></div><div class='input'><span class='va'>files_list</span>
-</div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Kenneth's French data library </span></div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span> Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html on Wed Sep 08 17:18:50 2021</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Files list </span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 297 × 3</span>
+</div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Kenneth's French data library </span></div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span> Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html on Wed Sep 08 19:04:17 2021</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Files list </span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 297 × 3</span>
 #&gt;    name                                                file_url     details_url 
 #&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                                               <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>        <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>       
 #&gt; <span style='color: #BCBCBC;'> 1</span> Fama/French 3 Factors                               ftp/F-F_Res… Data_Librar…
@@ -207,6 +219,23 @@
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: '0f91680fb05efaa655533f23c477ecd6',
+    indexName: 'frenchdata',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>

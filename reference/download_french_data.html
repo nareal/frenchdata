@@ -37,6 +37,12 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
 
 
 <meta property="og:title" content="Download the data set — download_french_data" />
@@ -112,6 +118,12 @@
 </li>
       </ul>
       
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -178,19 +190,11 @@
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
 <span class='va'>ff_3f</span> <span class='op'>&lt;-</span> <span class='fu'>download_french_data</span><span class='op'>(</span><span class='st'>'Fama/French 3 Factors'</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span class='message'>New names:</span>
-#&gt; <span class='message'>* `` -&gt; ...1</span></div><div class='output co'>#&gt; <span class='message'><span style='font-weight: bold;'>Rows: </span><span style='color: #0000BB;'>1140</span> <span style='font-weight: bold;'>Columns: </span><span style='color: #0000BB;'>5</span></span></div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>──</span> <span style='font-weight: bold;'>Column specification</span> <span style='color: #00BBBB;'>────────────────────────────────────────────────────────</span></span>
-#&gt; <span class='message'><span style='font-weight: bold;'>Delimiter:</span> ","</span>
-#&gt; <span class='message'><span style='color: #00BB00;'>dbl</span> (5): ...1, Mkt-RF, SMB, HML, RF</span></div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span> Use <span style='color: #262626; background-color: #DADADA;'>`spec()`</span> to retrieve the full column specification for this data.</span>
-#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span> Specify the column types or set <span style='color: #262626; background-color: #DADADA;'>`show_col_types = FALSE`</span> to quiet this message.</span></div><div class='output co'>#&gt; <span class='message'>New names:</span>
-#&gt; <span class='message'>* `` -&gt; ...1</span></div><div class='output co'>#&gt; <span class='message'><span style='font-weight: bold;'>Rows: </span><span style='color: #0000BB;'>94</span> <span style='font-weight: bold;'>Columns: </span><span style='color: #0000BB;'>5</span></span></div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>──</span> <span style='font-weight: bold;'>Column specification</span> <span style='color: #00BBBB;'>────────────────────────────────────────────────────────</span></span>
-#&gt; <span class='message'><span style='font-weight: bold;'>Delimiter:</span> ","</span>
-#&gt; <span class='message'><span style='color: #00BB00;'>dbl</span> (5): ...1, Mkt-RF, SMB, HML, RF</span></div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span> Use <span style='color: #262626; background-color: #DADADA;'>`spec()`</span> to retrieve the full column specification for this data.</span>
-#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span> Specify the column types or set <span style='color: #262626; background-color: #DADADA;'>`show_col_types = FALSE`</span> to quiet this message.</span></div><div class='input'><span class='va'>ff_3f</span>
+#&gt; <span class='message'>* `` -&gt; ...1</span></div><div class='output co'>#&gt; <span class='message'>New names:</span>
+#&gt; <span class='message'>* `` -&gt; ...1</span></div><div class='input'><span class='va'>ff_3f</span>
 </div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Kenneth's French data set </span></div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span> This file was created by CMPT_ME_BEME_RETS using the 202106 CRSP database. The 1-month TBill return is from Ibbotson and Associates, Inc. </span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip on Wed Sep 08 17:18:51 2021</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span> For details on the data set call the function `browse_details_page()` on this object</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Subsets in the file: </span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 2 × 2</span>
+#&gt; <span class='message'>Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip on Wed Sep 08 19:04:18 2021</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'><span style='color: #00BBBB;'>ℹ</span> For details on the data set call the function `browse_details_page()` on this object</span></div><div class='output co'>#&gt; </div><div class='output co'>#&gt; <span class='message'>── Subsets in the file: </span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 2 × 2</span>
 #&gt;   name                               data                     
 #&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                              <span style='color: #949494; font-style: italic;'>&lt;list&gt;</span>                   
 #&gt; <span style='color: #BCBCBC;'>1</span> <span style='color: #949494;'>""</span>                                 <span style='color: #949494;'>&lt;spec_tbl_df [1,140 × 5]&gt;</span>
@@ -218,6 +222,23 @@
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: '0f91680fb05efaa655533f23c477ecd6',
+    indexName: 'frenchdata',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>
