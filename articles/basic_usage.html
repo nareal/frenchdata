@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">frenchdata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1.9000</span>
       </span>
     </div>
 
@@ -111,22 +111,22 @@
 <code class="sourceCode R"><span class="va">data_sets</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; ── Kenneth's French data library</span>
-<span class="co">#&gt; ℹ Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html on Thu May 20 12:34:29 2021</span>
+<span class="co">#&gt; ℹ Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html on Wed Sep 08 17:18:56 2021</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; ── Files list</span>
-<span class="co">#&gt; # A tibble: 297 x 3</span>
-<span class="co">#&gt;    name                        file_url                   details_url           </span>
-<span class="co">#&gt;    &lt;chr&gt;                       &lt;chr&gt;                      &lt;chr&gt;                 </span>
-<span class="co">#&gt;  1 Fama/French 3 Factors       ftp/F-F_Research_Data_Fac… Data_Library/f-f_fact…</span>
-<span class="co">#&gt;  2 Fama/French 3 Factors [Wee… ftp/F-F_Research_Data_Fac… Data_Library/f-f_fact…</span>
-<span class="co">#&gt;  3 Fama/French 3 Factors [Dai… ftp/F-F_Research_Data_Fac… Data_Library/f-f_fact…</span>
-<span class="co">#&gt;  4 Fama/French 5 Factors (2x3) ftp/F-F_Research_Data_5_F… Data_Library/f-f_5_fa…</span>
-<span class="co">#&gt;  5 Fama/French 5 Factors (2x3… ftp/F-F_Research_Data_5_F… Data_Library/f-f_5_fa…</span>
-<span class="co">#&gt;  6 Portfolios Formed on Size   ftp/Portfolios_Formed_on_… Data_Library/det_port…</span>
-<span class="co">#&gt;  7 Portfolios Formed on Size … ftp/Portfolios_Formed_on_… Data_Library/det_port…</span>
-<span class="co">#&gt;  8 Portfolios Formed on Size … ftp/Portfolios_Formed_on_… Data_Library/det_port…</span>
-<span class="co">#&gt;  9 Portfolios Formed on Book-… ftp/Portfolios_Formed_on_… Data_Library/det_form…</span>
-<span class="co">#&gt; 10 Portfolios Formed on Book-… ftp/Portfolios_Formed_on_… Data_Library/det_form…</span>
+<span class="co">#&gt; # A tibble: 297 × 3</span>
+<span class="co">#&gt;    name                                                file_url     details_url </span>
+<span class="co">#&gt;    &lt;chr&gt;                                               &lt;chr&gt;        &lt;chr&gt;       </span>
+<span class="co">#&gt;  1 Fama/French 3 Factors                               ftp/F-F_Res… Data_Librar…</span>
+<span class="co">#&gt;  2 Fama/French 3 Factors [Weekly]                      ftp/F-F_Res… Data_Librar…</span>
+<span class="co">#&gt;  3 Fama/French 3 Factors [Daily]                       ftp/F-F_Res… Data_Librar…</span>
+<span class="co">#&gt;  4 Fama/French 5 Factors (2x3)                         ftp/F-F_Res… Data_Librar…</span>
+<span class="co">#&gt;  5 Fama/French 5 Factors (2x3) [Daily]                 ftp/F-F_Res… Data_Librar…</span>
+<span class="co">#&gt;  6 Portfolios Formed on Size                           ftp/Portfol… Data_Librar…</span>
+<span class="co">#&gt;  7 Portfolios Formed on Size [ex.Dividends]            ftp/Portfol… Data_Librar…</span>
+<span class="co">#&gt;  8 Portfolios Formed on Size [Daily]                   ftp/Portfol… Data_Librar…</span>
+<span class="co">#&gt;  9 Portfolios Formed on Book-to-Market                 ftp/Portfol… Data_Librar…</span>
+<span class="co">#&gt; 10 Portfolios Formed on Book-to-Market [ex. Dividends] ftp/Portfol… Data_Librar…</span>
 <span class="co">#&gt; # … with 287 more rows</span></code></pre></div>
 <div id="searching-for-a-data-set" class="section level2">
 <h2 class="hasAnchor">
@@ -145,37 +145,55 @@
 <p>To download a specific data, for instance the monthly Fama/French 5 Factors (2x3) set we can use:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">ff_5_factors</span> <span class="op">&lt;-</span> 
-  <span class="fu"><a href="../reference/download_french_data.html">download_french_data</a></span><span class="op">(</span><span class="st">"Fama/French 5 Factors (2x3)"</span><span class="op">)</span></code></pre></div>
+  <span class="fu"><a href="../reference/download_french_data.html">download_french_data</a></span><span class="op">(</span><span class="st">"Fama/French 5 Factors (2x3)"</span><span class="op">)</span>
+<span class="co">#&gt; New names:</span>
+<span class="co">#&gt; * `` -&gt; ...1</span>
+<span class="co">#&gt; Rows: 696 Columns: 7</span>
+<span class="co">#&gt; ── Column specification ────────────────────────────────────────────────────────</span>
+<span class="co">#&gt; Delimiter: ","</span>
+<span class="co">#&gt; dbl (7): ...1, Mkt-RF, SMB, HML, RMW, CMA, RF</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; ℹ Use `spec()` to retrieve the full column specification for this data.</span>
+<span class="co">#&gt; ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</span>
+<span class="co">#&gt; New names:</span>
+<span class="co">#&gt; * `` -&gt; ...1</span>
+<span class="co">#&gt; Rows: 57 Columns: 7</span>
+<span class="co">#&gt; ── Column specification ────────────────────────────────────────────────────────</span>
+<span class="co">#&gt; Delimiter: ","</span>
+<span class="co">#&gt; dbl (7): ...1, Mkt-RF, SMB, HML, RMW, CMA, RF</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; ℹ Use `spec()` to retrieve the full column specification for this data.</span>
+<span class="co">#&gt; ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></code></pre></div>
 <p>This will return an object of class <code>french_dataset</code>:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">ff_5_factors</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; ── Kenneth's French data set</span>
-<span class="co">#&gt; ℹ This file was created by CMPT_ME_BEME_OP_INV_RETS using the 202103 CRSP database. The 1-month TBill return is from Ibbotson and Associates Inc. </span>
+<span class="co">#&gt; ℹ This file was created by CMPT_ME_BEME_OP_INV_RETS using the 202106 CRSP database. The 1-month TBill return is from Ibbotson and Associates Inc. </span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_5_Factors_2x3_CSV.zip on Thu May 20 12:34:29 2021</span>
+<span class="co">#&gt; Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_5_Factors_2x3_CSV.zip on Wed Sep 08 17:18:58 2021</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; ℹ For details on the data set call the function `browse_details_page()` on this object</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; ── Subsets in the file:</span>
-<span class="co">#&gt; # A tibble: 2 x 2</span>
+<span class="co">#&gt; # A tibble: 2 × 2</span>
 <span class="co">#&gt;   name                               data                   </span>
 <span class="co">#&gt;   &lt;chr&gt;                              &lt;list&gt;                 </span>
-<span class="co">#&gt; 1 ""                                 &lt;spec_tbl_df [693 × 7]&gt;</span>
+<span class="co">#&gt; 1 ""                                 &lt;spec_tbl_df [696 × 7]&gt;</span>
 <span class="co">#&gt; 2 "Annual Factors: January-December" &lt;spec_tbl_df [57 × 7]&gt;</span></code></pre></div>
 <p>The file contains two subsets of data:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">ff_5_factors</span><span class="op">$</span><span class="va">subsets</span>
-<span class="co">#&gt; # A tibble: 2 x 2</span>
+<span class="co">#&gt; # A tibble: 2 × 2</span>
 <span class="co">#&gt;   name                               data                   </span>
 <span class="co">#&gt;   &lt;chr&gt;                              &lt;list&gt;                 </span>
-<span class="co">#&gt; 1 ""                                 &lt;spec_tbl_df [693 × 7]&gt;</span>
+<span class="co">#&gt; 1 ""                                 &lt;spec_tbl_df [696 × 7]&gt;</span>
 <span class="co">#&gt; 2 "Annual Factors: January-December" &lt;spec_tbl_df [57 × 7]&gt;</span></code></pre></div>
 <p>The first one is the default one and is unnamed, and the second one is on “Annual Factors: January-December”. We can access the data on the first subset:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">monthly_ff_5_factors</span> <span class="op">&lt;-</span> <span class="va">ff_5_factors</span><span class="op">$</span><span class="va">subsets</span><span class="op">$</span><span class="va">data</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>
 <span class="va">monthly_ff_5_factors</span>
-<span class="co">#&gt; # A tibble: 693 x 7</span>
+<span class="co">#&gt; # A tibble: 696 × 7</span>
 <span class="co">#&gt;      date `Mkt-RF`   SMB   HML   RMW   CMA    RF</span>
 <span class="co">#&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span>
 <span class="co">#&gt;  1 196307    -0.39 -0.45 -0.94  0.66 -1.15  0.27</span>
@@ -188,7 +206,7 @@
 <span class="co">#&gt;  8 196402     1.54  0.31  2.86  0.06  0.85  0.26</span>
 <span class="co">#&gt;  9 196403     1.41  1.4   3.37 -2.01  2.93  0.31</span>
 <span class="co">#&gt; 10 196404     0.1  -1.5  -0.66 -1.35 -1.08  0.29</span>
-<span class="co">#&gt; # … with 683 more rows</span></code></pre></div>
+<span class="co">#&gt; # … with 686 more rows</span></code></pre></div>
 <p>We can now browse use this data.frame directly, for instance, to plot all each of the factors and the risk-free rate overtime:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">monthly_ff_5_factors</span> <span class="op">%&gt;%</span> 
