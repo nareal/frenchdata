@@ -1,12 +1,5 @@
-## Resubmission
-
-This is a resubmission. Thank you so much for the comments. In this version I have:
-
-* Added \value to .Rd files regarding exported methods and explained  the functions results in the documentation. Added internal links for some documentation pages. Renamed print.Rd to print.french_data_list.Rd  
-* Changed \dontrun{} to \donttest{} in functions which download data.
-
 ## Test environments
-* local OS X install, R 4.0.4
+* local OS X install, R 4.1.1 (aarch64-apple-darwin20)
 * ubuntu-gcc-release (r-release)
 * fedora-clang-devel (r-devel)
 * windows-x86_64-devel (r-devel)
@@ -17,9 +10,13 @@ This is a resubmission. Thank you so much for the comments. In this version I ha
 
 0 errors | 0 warnings | 1 note
 
-There was 1 NOTE:
-
 * checking CRAN incoming feasibility ... NOTE
-  Maintainer: 'Nelson Areal <nareal@gmail.com>'
-  
-  New submission
+Maintainer: 'Nelson Areal <nareal@gmail.com>'
+
+New submission
+
+Package was archived on CRAN
+
+CRAN repository db overrides:
+    corrected in time.
+  X-CRAN-Comment: Archived on 2021-08-04 as check problems were not
