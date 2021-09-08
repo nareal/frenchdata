@@ -119,22 +119,22 @@
 <code class="sourceCode R"><span class="va">data_sets</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; ── Kenneth's French data library</span>
-<span class="co">#&gt; ℹ Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html on Wed Sep 08 19:04:24 2021</span>
+<span class="co">#&gt; ℹ Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html on Wed Sep 08 20:48:59 2021</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; ── Files list</span>
 <span class="co">#&gt; # A tibble: 297 × 3</span>
-<span class="co">#&gt;    name                                                file_url     details_url </span>
-<span class="co">#&gt;    &lt;chr&gt;                                               &lt;chr&gt;        &lt;chr&gt;       </span>
-<span class="co">#&gt;  1 Fama/French 3 Factors                               ftp/F-F_Res… Data_Librar…</span>
-<span class="co">#&gt;  2 Fama/French 3 Factors [Weekly]                      ftp/F-F_Res… Data_Librar…</span>
-<span class="co">#&gt;  3 Fama/French 3 Factors [Daily]                       ftp/F-F_Res… Data_Librar…</span>
-<span class="co">#&gt;  4 Fama/French 5 Factors (2x3)                         ftp/F-F_Res… Data_Librar…</span>
-<span class="co">#&gt;  5 Fama/French 5 Factors (2x3) [Daily]                 ftp/F-F_Res… Data_Librar…</span>
-<span class="co">#&gt;  6 Portfolios Formed on Size                           ftp/Portfol… Data_Librar…</span>
-<span class="co">#&gt;  7 Portfolios Formed on Size [ex.Dividends]            ftp/Portfol… Data_Librar…</span>
-<span class="co">#&gt;  8 Portfolios Formed on Size [Daily]                   ftp/Portfol… Data_Librar…</span>
-<span class="co">#&gt;  9 Portfolios Formed on Book-to-Market                 ftp/Portfol… Data_Librar…</span>
-<span class="co">#&gt; 10 Portfolios Formed on Book-to-Market [ex. Dividends] ftp/Portfol… Data_Librar…</span>
+<span class="co">#&gt;    name                                                file_url details_url</span>
+<span class="co">#&gt;    &lt;chr&gt;                                               &lt;chr&gt;    &lt;chr&gt;      </span>
+<span class="co">#&gt;  1 Fama/French 3 Factors                               ftp/F-F… Data_Libra…</span>
+<span class="co">#&gt;  2 Fama/French 3 Factors [Weekly]                      ftp/F-F… Data_Libra…</span>
+<span class="co">#&gt;  3 Fama/French 3 Factors [Daily]                       ftp/F-F… Data_Libra…</span>
+<span class="co">#&gt;  4 Fama/French 5 Factors (2x3)                         ftp/F-F… Data_Libra…</span>
+<span class="co">#&gt;  5 Fama/French 5 Factors (2x3) [Daily]                 ftp/F-F… Data_Libra…</span>
+<span class="co">#&gt;  6 Portfolios Formed on Size                           ftp/Por… Data_Libra…</span>
+<span class="co">#&gt;  7 Portfolios Formed on Size [ex.Dividends]            ftp/Por… Data_Libra…</span>
+<span class="co">#&gt;  8 Portfolios Formed on Size [Daily]                   ftp/Por… Data_Libra…</span>
+<span class="co">#&gt;  9 Portfolios Formed on Book-to-Market                 ftp/Por… Data_Libra…</span>
+<span class="co">#&gt; 10 Portfolios Formed on Book-to-Market [ex. Dividends] ftp/Por… Data_Libra…</span>
 <span class="co">#&gt; # … with 287 more rows</span></code></pre></div>
 <div id="searching-for-a-data-set" class="section level2">
 <h2 class="hasAnchor">
@@ -152,7 +152,7 @@
 <a href="#downloading-a-data-set" class="anchor"></a>Downloading a data set</h2>
 <p>To download a specific data, for instance the monthly Fama/French 5 Factors (2x3) set we can use:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">ff_5_factors</span> <span class="op">&lt;-</span> 
+<code class="sourceCode R"><span class="va">ff_5_factors</span> <span class="op">&lt;-</span>
   <span class="fu"><a href="../reference/download_french_data.html">download_french_data</a></span><span class="op">(</span><span class="st">"Fama/French 5 Factors (2x3)"</span><span class="op">)</span>
 <span class="co">#&gt; New names:</span>
 <span class="co">#&gt; * `` -&gt; ...1</span>
@@ -165,7 +165,7 @@
 <span class="co">#&gt; ── Kenneth's French data set</span>
 <span class="co">#&gt; ℹ This file was created by CMPT_ME_BEME_OP_INV_RETS using the 202106 CRSP database. The 1-month TBill return is from Ibbotson and Associates Inc. </span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_5_Factors_2x3_CSV.zip on Wed Sep 08 19:04:25 2021</span>
+<span class="co">#&gt; Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_5_Factors_2x3_CSV.zip on Wed Sep 08 20:57:17 2021</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; ℹ For details on the data set call the function `browse_details_page()` on this object</span>
 <span class="co">#&gt; </span>
@@ -203,19 +203,21 @@
 <span class="co">#&gt; # … with 686 more rows</span></code></pre></div>
 <p>We can now browse use this data.frame directly, for instance, to plot all each of the factors and the risk-free rate overtime:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">monthly_ff_5_factors</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>date <span class="op">=</span> <span class="fu"><a href="http://lubridate.tidyverse.org/reference/ymd.html">ym</a></span><span class="op">(</span><span class="va">date</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols <span class="op">=</span> <span class="op">-</span><span class="va">date</span>, 
-               names_to <span class="op">=</span> <span class="st">"factor"</span>, 
-               values_to <span class="op">=</span> <span class="st">"value"</span><span class="op">)</span> <span class="op">%&gt;%</span> 
+<code class="sourceCode R"><span class="va">monthly_ff_5_factors</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>date <span class="op">=</span> <span class="fu"><a href="http://lubridate.tidyverse.org/reference/ymd.html">ym</a></span><span class="op">(</span><span class="va">date</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols <span class="op">=</span> <span class="op">-</span><span class="va">date</span>,
+               names_to <span class="op">=</span> <span class="st">"factor"</span>,
+               values_to <span class="op">=</span> <span class="st">"value"</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">.</span>,
-         mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">date</span>, y <span class="op">=</span> <span class="va">value</span>, 
-                       group <span class="op">=</span> <span class="va">factor</span>, 
+         mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">date</span>, y <span class="op">=</span> <span class="va">value</span>,
+                       group <span class="op">=</span> <span class="va">factor</span>,
                        color <span class="op">=</span> <span class="va">factor</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Source: Kenneth French Data Library"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span> <span class="op">~</span> <span class="va">factor</span><span class="op">)</span></code></pre></div>
-<p><img src="basic_usage_files/figure-html/unnamed-chunk-10-1.png" width="672"></p>
+<div class="figure">
+<img src="figure-unnamed-chunk-10-1.png" alt=""><p class="caption">plot of chunk unnamed-chunk-10</p>
+</div>
 <p>We can browse the details page for this specific data set using:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/browse_details_page.html">browse_details_page</a></span><span class="op">(</span><span class="va">ff_5_factors</span><span class="op">)</span></code></pre></div>
@@ -225,14 +227,14 @@
 <a href="#downloading-and-saving-a-data-set" class="anchor"></a>Downloading and saving a data set</h2>
 <p>We can also save the original uncompressed file when downloading and reading it, by specifying a valid path name:</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">ff_5_factors</span> <span class="op">&lt;-</span> 
+<code class="sourceCode R"><span class="va">ff_5_factors</span> <span class="op">&lt;-</span>
   <span class="fu"><a href="../reference/download_french_data.html">download_french_data</a></span><span class="op">(</span><span class="st">"Fama/French 5 Factors (2x3)"</span>,
                        dir <span class="op">=</span> <span class="st">"."</span>,
                        dest_file <span class="op">=</span> <span class="st">"fama_french_5_factors.zip"</span><span class="op">)</span></code></pre></div>
 <p>This will download the file, read it, assign the result to the object <code>ff_5_factors</code>, and save the results to the file <code>fama_french_5_factors.zip</code> on the current directory.</p>
 <p>If we prefer to use the original file name just leave the <code>dest_file</code> parameter unset:</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">ff_5_factors</span> <span class="op">&lt;-</span> 
+<code class="sourceCode R"><span class="va">ff_5_factors</span> <span class="op">&lt;-</span>
   <span class="fu"><a href="../reference/download_french_data.html">download_french_data</a></span><span class="op">(</span><span class="st">"Fama/French 5 Factors (2x3)"</span>,
                        dir <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></code></pre></div>
 </div>
