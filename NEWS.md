@@ -1,3 +1,5 @@
+# frenchdata (development version)
+
 # frenchdata 0.1.1
 
 * Updated documentation: added explainations to the functions results. Added internal links for some documentation pages. Renamed print.Rd to print.french_data_list.Rd  
