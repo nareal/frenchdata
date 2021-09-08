@@ -79,7 +79,7 @@ browse_details_page <- function(fds) {
 
 
 read_info <- function(skip, csv_file){
-  info <- readr::read_lines(csv_file, n_max = 1, skip = skip)
+  info <- readr::read_lines(I(csv_file), n_max = 1, skip = skip)
   if (length(info) == 0) {
     info <-  ""
   } else {
@@ -91,7 +91,7 @@ read_info <- function(skip, csv_file){
 
 read_data <- function(skip, n_max, csv_file){
   csv_data <- suppressWarnings(readr::read_csv(
-    csv_file,
+    I(csv_file),
     skip = skip,
     n_max = n_max,
     guess_max = n_max,
@@ -224,7 +224,7 @@ download_french_data <- function(dataset_name,
                          end = dplyr::last(.data$line))
 
       header_info <-
-        readr::read_lines(file_content,
+        readr::read_lines(I(file_content),
                           n_max = subsets$start[1] - 2) %>%
         stringr::str_trim(side = "both") %>%
         paste(collapse = " ")
