@@ -6,3 +6,7 @@ authors:
 
 template:
   bootstrap: 4
+  params:
+    docsearch:
+      api_key: '0f91680fb05efaa655533f23c477ecd6'
+      index_name: 'frenchdata'
