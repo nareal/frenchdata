@@ -1,5 +1,6 @@
 # frenchdata (development version)
 
+* Vignette is now knitted locally avoiding a internet connections during the build process. This should solve the CRAN errors during builds.
 * Updates for compatibility with readr v.2: Use I() to denote literal data; turned off the file read progress; removed show column types information when reading the file.
 
 # frenchdata 0.1.1
