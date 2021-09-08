@@ -79,7 +79,8 @@ browse_details_page <- function(fds) {
 
 
 read_info <- function(skip, csv_file){
-  info <- readr::read_lines(I(csv_file), n_max = 1, skip = skip)
+  info <- readr::read_lines(I(csv_file), n_max = 1, skip = skip,
+                            progress = FALSE)
   if (length(info) == 0) {
     info <-  ""
   } else {
@@ -95,7 +96,9 @@ read_data <- function(skip, n_max, csv_file){
     skip = skip,
     n_max = n_max,
     guess_max = n_max,
-    col_names = TRUE
+    col_names = TRUE,
+    show_col_types = FALSE,
+    progress = FALSE
   ))
 
   csv_data <- csv_data %>%
@@ -204,7 +207,7 @@ download_french_data <- function(dataset_name,
 
     if (httr::status_code(request) == 200) {
       success <- TRUE
-      file_content <- readr::read_lines(temp_file_name)
+      file_content <- readr::read_lines(temp_file_name, progress = FALSE)
 
       subsets <- tibble::tibble(text = file_content) %>%
         dplyr::mutate(
@@ -225,7 +228,8 @@ download_french_data <- function(dataset_name,
 
       header_info <-
         readr::read_lines(I(file_content),
-                          n_max = subsets$start[1] - 2) %>%
+                          n_max = subsets$start[1] - 2,
+                          progress = FALSE) %>%
         stringr::str_trim(side = "both") %>%
         paste(collapse = " ")
 
