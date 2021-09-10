@@ -91,7 +91,7 @@ read_info <- function(skip, csv_file){
 }
 
 read_data <- function(skip, n_max, csv_file){
-  csv_data <- suppressWarnings(readr::read_csv(
+  csv_data <- suppressMessages(suppressWarnings(readr::read_csv(
     I(csv_file),
     skip = skip,
     n_max = n_max,
@@ -99,7 +99,7 @@ read_data <- function(skip, n_max, csv_file){
     col_names = TRUE,
     show_col_types = FALSE,
     progress = FALSE
-  ))
+  )))
 
   csv_data <- csv_data %>%
     rlang::set_names(c("date", names(csv_data)[-1]))
