@@ -1,3 +1,5 @@
+# frenchdata (development version)
+
 # frenchdata 0.2.0
 
 * Vignette is now knitted locally avoiding a internet connections during the build process. This should solve the CRAN errors during builds.
