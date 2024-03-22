@@ -4,278 +4,260 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="frenchdata">
 <title>Basic Usage • frenchdata</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><!-- docsearch --><script src="../docsearch.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous">
-<link href="../docsearch.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script><meta property="og:title" content="Basic Usage">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Basic Usage">
 <meta property="og:description" content="frenchdata">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#toc">
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">frenchdata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.9000</span>
-      </span>
-    </div>
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
+    
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
+    <a class="navbar-brand me-2" href="../index.html">frenchdata</a>
+
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0.9200</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="../reference/index.html">Reference</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="../articles/basic_usage.html">Basic Usage</a>
-    </li>
-  </ul>
-</li>
-<li>
-  <a href="../news/index.html">Changelog</a>
-</li>
-      </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://github.com/nareal/frenchdata/">
-    <span class="fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
-      </ul>
-<form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
-        <div class="form-group">
-          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
-</div>
-      </form>
-      
-    </div>
-<!--/.nav-collapse -->
+<li class="active nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/basic_usage.html">Basic Usage</a>
   </div>
-<!--/.container -->
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
+</li>
+      </ul>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="nav-link" href="https://github.com/nareal/frenchdata/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
-<!--/.navbar -->
 
-      
+    
+  </div>
+</nav><div class="container template-article">
 
-      </header><script src="basic_usage_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Basic Usage</h1>
+
+
+
+<div class="row">
+  <main id="main" class="col-md-9"><div class="page-header">
+      <img src="" class="logo" alt=""><h1>Basic Usage</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/nareal/frenchdata/blob/master/vignettes/basic_usage.Rmd"><code>vignettes/basic_usage.Rmd</code></a></small>
-      <div class="hidden name"><code>basic_usage.Rmd</code></div>
-
+      <small class="dont-index">Source: <a href="https://github.com/nareal/frenchdata/blob/HEAD/vignettes/basic_usage.Rmd"><code>vignettes/basic_usage.Rmd</code></a></small>
+      <div class="d-none name"><code>basic_usage.Rmd</code></div>
     </div>
 
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyr.tidyverse.org">tidyr</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org">lubridate</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://nareal.github.io/frenchdata/">frenchdata</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></code></pre></div>
-<p>The <code>frenchdata</code> package provides functions to download the finance data sets provided by the <a href="http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html">data library website</a> of Prof. Kenneth French.</p>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyr.tidyverse.org" class="external-link">tidyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org" class="external-link">lubridate</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://nareal.github.io/frenchdata/" class="external-link">frenchdata</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
+<p>The <code>frenchdata</code> package provides functions to download
+the finance data sets provided by the <a href="http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html" class="external-link">data
+library website</a> of Prof. Kenneth French.</p>
 <p>We can visit the website using the function:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/browse_french_site.html">browse_french_site</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/browse_french_site.html">browse_french_site</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>this will open the page on your default browser.</p>
-<p>As a first step we get the list of data sets that are currently available to download:</p>
+<p>As a first step we get the list of data sets that are currently
+available to download:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">data_sets</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_french_data_list.html">get_french_data_list</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p>The <code><a href="../reference/get_french_data_list.html">get_french_data_list()</a></code> function returns an object of the S3 class <code>french_data_list</code>:</p>
+<code class="sourceCode R"><span><span class="va">data_sets</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_french_data_list.html">get_french_data_list</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>The <code><a href="../reference/get_french_data_list.html">get_french_data_list()</a></code> function returns an object of
+the S3 class <code>french_data_list</code>:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">data_sets</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ── Kenneth's French data library</span>
-<span class="co">#&gt; ℹ Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html on Wed Sep 08 20:48:59 2021</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ── Files list</span>
-<span class="co">#&gt; # A tibble: 297 × 3</span>
-<span class="co">#&gt;    name                                                file_url details_url</span>
-<span class="co">#&gt;    &lt;chr&gt;                                               &lt;chr&gt;    &lt;chr&gt;      </span>
-<span class="co">#&gt;  1 Fama/French 3 Factors                               ftp/F-F… Data_Libra…</span>
-<span class="co">#&gt;  2 Fama/French 3 Factors [Weekly]                      ftp/F-F… Data_Libra…</span>
-<span class="co">#&gt;  3 Fama/French 3 Factors [Daily]                       ftp/F-F… Data_Libra…</span>
-<span class="co">#&gt;  4 Fama/French 5 Factors (2x3)                         ftp/F-F… Data_Libra…</span>
-<span class="co">#&gt;  5 Fama/French 5 Factors (2x3) [Daily]                 ftp/F-F… Data_Libra…</span>
-<span class="co">#&gt;  6 Portfolios Formed on Size                           ftp/Por… Data_Libra…</span>
-<span class="co">#&gt;  7 Portfolios Formed on Size [ex.Dividends]            ftp/Por… Data_Libra…</span>
-<span class="co">#&gt;  8 Portfolios Formed on Size [Daily]                   ftp/Por… Data_Libra…</span>
-<span class="co">#&gt;  9 Portfolios Formed on Book-to-Market                 ftp/Por… Data_Libra…</span>
-<span class="co">#&gt; 10 Portfolios Formed on Book-to-Market [ex. Dividends] ftp/Por… Data_Libra…</span>
-<span class="co">#&gt; # … with 287 more rows</span></code></pre></div>
-<div id="searching-for-a-data-set" class="section level2">
-<h2 class="hasAnchor">
-<a href="#searching-for-a-data-set" class="anchor"></a>Searching for a data set</h2>
-<p>To download a data set we need to identify its name first from the list <code>data_sets</code> obtained previously. A simple way of performing this search is to use the <code><a href="https://rdrr.io/r/utils/View.html">View()</a></code> function provided by RStudio on the <code>files_list</code> element that contains the the files list:</p>
+<code class="sourceCode R"><span><span class="va">data_sets</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ── Kenneth's French data library</span></span>
+<span><span class="co">#&gt; ℹ Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html on Wed Sep 08 20:48:59 2021</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ── Files list</span></span>
+<span><span class="co">#&gt; # A tibble: 297 × 3</span></span>
+<span><span class="co">#&gt;    name                                                file_url details_url</span></span>
+<span><span class="co">#&gt;    &lt;chr&gt;                                               &lt;chr&gt;    &lt;chr&gt;      </span></span>
+<span><span class="co">#&gt;  1 Fama/French 3 Factors                               ftp/F-F… Data_Libra…</span></span>
+<span><span class="co">#&gt;  2 Fama/French 3 Factors [Weekly]                      ftp/F-F… Data_Libra…</span></span>
+<span><span class="co">#&gt;  3 Fama/French 3 Factors [Daily]                       ftp/F-F… Data_Libra…</span></span>
+<span><span class="co">#&gt;  4 Fama/French 5 Factors (2x3)                         ftp/F-F… Data_Libra…</span></span>
+<span><span class="co">#&gt;  5 Fama/French 5 Factors (2x3) [Daily]                 ftp/F-F… Data_Libra…</span></span>
+<span><span class="co">#&gt;  6 Portfolios Formed on Size                           ftp/Por… Data_Libra…</span></span>
+<span><span class="co">#&gt;  7 Portfolios Formed on Size [ex.Dividends]            ftp/Por… Data_Libra…</span></span>
+<span><span class="co">#&gt;  8 Portfolios Formed on Size [Daily]                   ftp/Por… Data_Libra…</span></span>
+<span><span class="co">#&gt;  9 Portfolios Formed on Book-to-Market                 ftp/Por… Data_Libra…</span></span>
+<span><span class="co">#&gt; 10 Portfolios Formed on Book-to-Market [ex. Dividends] ftp/Por… Data_Libra…</span></span>
+<span><span class="co">#&gt; # … with 287 more rows</span></span></code></pre></div>
+<div class="section level2">
+<h2 id="searching-for-a-data-set">Searching for a data set<a class="anchor" aria-label="anchor" href="#searching-for-a-data-set"></a>
+</h2>
+<p>To download a data set we need to identify its name first from the
+list <code>data_sets</code> obtained previously. A simple way of
+performing this search is to use the <code><a href="https://rdrr.io/r/utils/View.html" class="external-link">View()</a></code> function
+provided by RStudio on the <code>files_list</code> element that contains
+the the files list:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/View.html">View</a></span><span class="op">(</span><span class="va">data_sets</span><span class="op">$</span><span class="va">files_list</span><span class="op">)</span></code></pre></div>
-<div class="figure">
-<img src="img/using_rstudio_viewer_to_filter.png" style="width:90.0%" alt=""><p class="caption">Using the filter on Rstudio viewer</p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/View.html" class="external-link">View</a></span><span class="op">(</span><span class="va">data_sets</span><span class="op">$</span><span class="va">files_list</span><span class="op">)</span></span></code></pre></div>
+<div class="float">
+<img src="img/using_rstudio_viewer_to_filter.png" style="width:90.0%" alt="Using the filter on Rstudio viewer"><div class="figcaption">Using the filter on Rstudio viewer</div>
 </div>
-<p>and use the filter to narrow down the search, for instance if I’m looking for the 5 factors I can quickly identify the correct data set name.</p>
+<p>and use the filter to narrow down the search, for instance if I’m
+looking for the 5 factors I can quickly identify the correct data set
+name.</p>
 </div>
-<div id="downloading-a-data-set" class="section level2">
-<h2 class="hasAnchor">
-<a href="#downloading-a-data-set" class="anchor"></a>Downloading a data set</h2>
-<p>To download a specific data, for instance the monthly Fama/French 5 Factors (2x3) set we can use:</p>
+<div class="section level2">
+<h2 id="downloading-a-data-set">Downloading a data set<a class="anchor" aria-label="anchor" href="#downloading-a-data-set"></a>
+</h2>
+<p>To download a specific data, for instance the monthly Fama/French 5
+Factors (2x3) set we can use:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">ff_5_factors</span> <span class="op">&lt;-</span>
-  <span class="fu"><a href="../reference/download_french_data.html">download_french_data</a></span><span class="op">(</span><span class="st">"Fama/French 5 Factors (2x3)"</span><span class="op">)</span>
-<span class="co">#&gt; New names:</span>
-<span class="co">#&gt; * `` -&gt; ...1</span>
-<span class="co">#&gt; New names:</span>
-<span class="co">#&gt; * `` -&gt; ...1</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">ff_5_factors</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu"><a href="../reference/download_french_data.html">download_french_data</a></span><span class="op">(</span><span class="st">"Fama/French 5 Factors (2x3)"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; New names:</span></span>
+<span><span class="co">#&gt; * `` -&gt; ...1</span></span>
+<span><span class="co">#&gt; New names:</span></span>
+<span><span class="co">#&gt; * `` -&gt; ...1</span></span></code></pre></div>
 <p>This will return an object of class <code>french_dataset</code>:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">ff_5_factors</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ── Kenneth's French data set</span>
-<span class="co">#&gt; ℹ This file was created by CMPT_ME_BEME_OP_INV_RETS using the 202106 CRSP database. The 1-month TBill return is from Ibbotson and Associates Inc. </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_5_Factors_2x3_CSV.zip on Wed Sep 08 20:57:17 2021</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ℹ For details on the data set call the function `browse_details_page()` on this object</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ── Subsets in the file:</span>
-<span class="co">#&gt; # A tibble: 2 × 2</span>
-<span class="co">#&gt;   name                               data                   </span>
-<span class="co">#&gt;   &lt;chr&gt;                              &lt;list&gt;                 </span>
-<span class="co">#&gt; 1 ""                                 &lt;spec_tbl_df [696 × 7]&gt;</span>
-<span class="co">#&gt; 2 "Annual Factors: January-December" &lt;spec_tbl_df [57 × 7]&gt;</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">ff_5_factors</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ── Kenneth's French data set</span></span>
+<span><span class="co">#&gt; ℹ This file was created by CMPT_ME_BEME_OP_INV_RETS using the 202106 CRSP database. The 1-month TBill return is from Ibbotson and Associates Inc. </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Information collected from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_5_Factors_2x3_CSV.zip on Wed Sep 08 20:57:17 2021</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ℹ For details on the data set call the function `browse_details_page()` on this object</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ── Subsets in the file:</span></span>
+<span><span class="co">#&gt; # A tibble: 2 × 2</span></span>
+<span><span class="co">#&gt;   name                               data                   </span></span>
+<span><span class="co">#&gt;   &lt;chr&gt;                              &lt;list&gt;                 </span></span>
+<span><span class="co">#&gt; 1 ""                                 &lt;spec_tbl_df [696 × 7]&gt;</span></span>
+<span><span class="co">#&gt; 2 "Annual Factors: January-December" &lt;spec_tbl_df [57 × 7]&gt;</span></span></code></pre></div>
 <p>The file contains two subsets of data:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">ff_5_factors</span><span class="op">$</span><span class="va">subsets</span>
-<span class="co">#&gt; # A tibble: 2 × 2</span>
-<span class="co">#&gt;   name                               data                   </span>
-<span class="co">#&gt;   &lt;chr&gt;                              &lt;list&gt;                 </span>
-<span class="co">#&gt; 1 ""                                 &lt;spec_tbl_df [696 × 7]&gt;</span>
-<span class="co">#&gt; 2 "Annual Factors: January-December" &lt;spec_tbl_df [57 × 7]&gt;</span></code></pre></div>
-<p>The first one is the default one and is unnamed, and the second one is on “Annual Factors: January-December”. We can access the data on the first subset:</p>
+<code class="sourceCode R"><span><span class="va">ff_5_factors</span><span class="op">$</span><span class="va">subsets</span></span>
+<span><span class="co">#&gt; # A tibble: 2 × 2</span></span>
+<span><span class="co">#&gt;   name                               data                   </span></span>
+<span><span class="co">#&gt;   &lt;chr&gt;                              &lt;list&gt;                 </span></span>
+<span><span class="co">#&gt; 1 ""                                 &lt;spec_tbl_df [696 × 7]&gt;</span></span>
+<span><span class="co">#&gt; 2 "Annual Factors: January-December" &lt;spec_tbl_df [57 × 7]&gt;</span></span></code></pre></div>
+<p>The first one is the default one and is unnamed, and the second one
+is on “Annual Factors: January-December”. We can access the data on the
+first subset:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">monthly_ff_5_factors</span> <span class="op">&lt;-</span> <span class="va">ff_5_factors</span><span class="op">$</span><span class="va">subsets</span><span class="op">$</span><span class="va">data</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>
-<span class="va">monthly_ff_5_factors</span>
-<span class="co">#&gt; # A tibble: 696 × 7</span>
-<span class="co">#&gt;      date `Mkt-RF`   SMB   HML   RMW   CMA    RF</span>
-<span class="co">#&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span>
-<span class="co">#&gt;  1 196307    -0.39 -0.45 -0.94  0.66 -1.15  0.27</span>
-<span class="co">#&gt;  2 196308     5.07 -0.82  1.82  0.4  -0.4   0.25</span>
-<span class="co">#&gt;  3 196309    -1.57 -0.48  0.17 -0.76  0.24  0.27</span>
-<span class="co">#&gt;  4 196310     2.53 -1.3  -0.04  2.75 -2.24  0.29</span>
-<span class="co">#&gt;  5 196311    -0.85 -0.85  1.7  -0.45  2.22  0.27</span>
-<span class="co">#&gt;  6 196312     1.83 -1.9  -0.06  0.07 -0.3   0.29</span>
-<span class="co">#&gt;  7 196401     2.24  0.08  1.53  0.22  1.5   0.3 </span>
-<span class="co">#&gt;  8 196402     1.54  0.31  2.86  0.06  0.85  0.26</span>
-<span class="co">#&gt;  9 196403     1.41  1.4   3.37 -2.01  2.93  0.31</span>
-<span class="co">#&gt; 10 196404     0.1  -1.5  -0.66 -1.35 -1.08  0.29</span>
-<span class="co">#&gt; # … with 686 more rows</span></code></pre></div>
-<p>We can now browse use this data.frame directly, for instance, to plot all each of the factors and the risk-free rate overtime:</p>
+<code class="sourceCode R"><span><span class="va">monthly_ff_5_factors</span> <span class="op">&lt;-</span> <span class="va">ff_5_factors</span><span class="op">$</span><span class="va">subsets</span><span class="op">$</span><span class="va">data</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
+<span><span class="va">monthly_ff_5_factors</span></span>
+<span><span class="co">#&gt; # A tibble: 696 × 7</span></span>
+<span><span class="co">#&gt;      date `Mkt-RF`   SMB   HML   RMW   CMA    RF</span></span>
+<span><span class="co">#&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt;  1 196307    -0.39 -0.45 -0.94  0.66 -1.15  0.27</span></span>
+<span><span class="co">#&gt;  2 196308     5.07 -0.82  1.82  0.4  -0.4   0.25</span></span>
+<span><span class="co">#&gt;  3 196309    -1.57 -0.48  0.17 -0.76  0.24  0.27</span></span>
+<span><span class="co">#&gt;  4 196310     2.53 -1.3  -0.04  2.75 -2.24  0.29</span></span>
+<span><span class="co">#&gt;  5 196311    -0.85 -0.85  1.7  -0.45  2.22  0.27</span></span>
+<span><span class="co">#&gt;  6 196312     1.83 -1.9  -0.06  0.07 -0.3   0.29</span></span>
+<span><span class="co">#&gt;  7 196401     2.24  0.08  1.53  0.22  1.5   0.3 </span></span>
+<span><span class="co">#&gt;  8 196402     1.54  0.31  2.86  0.06  0.85  0.26</span></span>
+<span><span class="co">#&gt;  9 196403     1.41  1.4   3.37 -2.01  2.93  0.31</span></span>
+<span><span class="co">#&gt; 10 196404     0.1  -1.5  -0.66 -1.35 -1.08  0.29</span></span>
+<span><span class="co">#&gt; # … with 686 more rows</span></span></code></pre></div>
+<p>We can now browse use this data.frame directly, for instance, to plot
+all each of the factors and the risk-free rate overtime:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">monthly_ff_5_factors</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>date <span class="op">=</span> <span class="fu"><a href="http://lubridate.tidyverse.org/reference/ymd.html">ym</a></span><span class="op">(</span><span class="va">date</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols <span class="op">=</span> <span class="op">-</span><span class="va">date</span>,
-               names_to <span class="op">=</span> <span class="st">"factor"</span>,
-               values_to <span class="op">=</span> <span class="st">"value"</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">.</span>,
-         mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">date</span>, y <span class="op">=</span> <span class="va">value</span>,
-                       group <span class="op">=</span> <span class="va">factor</span>,
-                       color <span class="op">=</span> <span class="va">factor</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Source: Kenneth French Data Library"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span> <span class="op">~</span> <span class="va">factor</span><span class="op">)</span></code></pre></div>
-<div class="figure">
-<img src="figure-unnamed-chunk-10-1.png" alt=""><p class="caption">plot of chunk unnamed-chunk-10</p>
+<code class="sourceCode R"><span><span class="va">monthly_ff_5_factors</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>date <span class="op">=</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html" class="external-link">ym</a></span><span class="op">(</span><span class="va">date</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html" class="external-link">pivot_longer</a></span><span class="op">(</span>cols <span class="op">=</span> <span class="op">-</span><span class="va">date</span>,</span>
+<span>               names_to <span class="op">=</span> <span class="st">"factor"</span>,</span>
+<span>               values_to <span class="op">=</span> <span class="st">"value"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">.</span>,</span>
+<span>         mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">date</span>, y <span class="op">=</span> <span class="va">value</span>,</span>
+<span>                       group <span class="op">=</span> <span class="va">factor</span>,</span>
+<span>                       color <span class="op">=</span> <span class="va">factor</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Source: Kenneth French Data Library"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html" class="external-link">facet_wrap</a></span><span class="op">(</span> <span class="op">~</span> <span class="va">factor</span><span class="op">)</span></span></code></pre></div>
+<div class="float">
+<img src="figure-unnamed-chunk-10-1.png" alt="plot of chunk unnamed-chunk-10"><div class="figcaption">plot of chunk unnamed-chunk-10</div>
 </div>
 <p>We can browse the details page for this specific data set using:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/browse_details_page.html">browse_details_page</a></span><span class="op">(</span><span class="va">ff_5_factors</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/browse_details_page.html">browse_details_page</a></span><span class="op">(</span><span class="va">ff_5_factors</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="downloading-and-saving-a-data-set" class="section level2">
-<h2 class="hasAnchor">
-<a href="#downloading-and-saving-a-data-set" class="anchor"></a>Downloading and saving a data set</h2>
-<p>We can also save the original uncompressed file when downloading and reading it, by specifying a valid path name:</p>
+<div class="section level2">
+<h2 id="downloading-and-saving-a-data-set">Downloading and saving a data set<a class="anchor" aria-label="anchor" href="#downloading-and-saving-a-data-set"></a>
+</h2>
+<p>We can also save the original uncompressed file when downloading and
+reading it, by specifying a valid path name:</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">ff_5_factors</span> <span class="op">&lt;-</span>
-  <span class="fu"><a href="../reference/download_french_data.html">download_french_data</a></span><span class="op">(</span><span class="st">"Fama/French 5 Factors (2x3)"</span>,
-                       dir <span class="op">=</span> <span class="st">"."</span>,
-                       dest_file <span class="op">=</span> <span class="st">"fama_french_5_factors.zip"</span><span class="op">)</span></code></pre></div>
-<p>This will download the file, read it, assign the result to the object <code>ff_5_factors</code>, and save the results to the file <code>fama_french_5_factors.zip</code> on the current directory.</p>
-<p>If we prefer to use the original file name just leave the <code>dest_file</code> parameter unset:</p>
+<code class="sourceCode R"><span><span class="va">ff_5_factors</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu"><a href="../reference/download_french_data.html">download_french_data</a></span><span class="op">(</span><span class="st">"Fama/French 5 Factors (2x3)"</span>,</span>
+<span>                       dir <span class="op">=</span> <span class="st">"."</span>,</span>
+<span>                       dest_file <span class="op">=</span> <span class="st">"fama_french_5_factors.zip"</span><span class="op">)</span></span></code></pre></div>
+<p>This will download the file, read it, assign the result to the object
+<code>ff_5_factors</code>, and save the results to the file
+<code>fama_french_5_factors.zip</code> on the current directory.</p>
+<p>If we prefer to use the original file name just leave the
+<code>dest_file</code> parameter unset:</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">ff_5_factors</span> <span class="op">&lt;-</span>
-  <span class="fu"><a href="../reference/download_french_data.html">download_french_data</a></span><span class="op">(</span><span class="st">"Fama/French 5 Factors (2x3)"</span>,
-                       dir <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">ff_5_factors</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu"><a href="../reference/download_french_data.html">download_french_data</a></span><span class="op">(</span><span class="st">"Fama/French 5 Factors (2x3)"</span>,</span>
+<span>                       dir <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></span></code></pre></div>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
-
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
-  <p>Developed by <a href="https://nelsonareal.net">Nelson Areal</a>.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p></p>
+<p>Developed by <a href="https://nelsonareal.net" class="external-link">Nelson Areal</a>.</p>
 </div>
 
-<div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+<div class="pkgdown-footer-right">
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script><script>
-  docsearch({
-    
-    
-    apiKey: '0f91680fb05efaa655533f23c477ecd6',
-    indexName: 'frenchdata',
-    inputSelector: 'input#search-input.form-control',
-    transformData: function(hits) {
-      return hits.map(function (hit) {
-        hit.url = updateHitURL(hit);
-        return hit;
-      });
-    }
-  });
-</script>
-</body>
+
+  
+
+  </body>
 </html>
