@@ -208,7 +208,7 @@ download_french_data <- function(dataset_name,
     if (httr::status_code(request) == 200) {
       success <- TRUE
       probable_encodings <-
-        guess_encoding(temp_file_name)
+        readr::guess_encoding(temp_file_name)
       file_content <- readr::read_lines(temp_file_name, progress = FALSE) %>%
         stringr::str_conv(probable_encodings$encoding[1])
 

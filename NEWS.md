@@ -2,6 +2,7 @@
 
 * Suppress message when downloading data
 * Fixed an error caused by incorrect detection of file encoding.
+* Fixed a typo on the NEWS 
 
 # frenchdata 0.2.0
 
@@ -11,7 +12,7 @@
 
 # frenchdata 0.1.1
 
-* Updated documentation: added explainations to the functions results. Added internal links for some documentation pages. Renamed print.Rd to print.french_data_list.Rd  
+* Updated documentation: added explanations to the functions results. Added internal links for some documentation pages. Renamed print.Rd to print.french_data_list.Rd  
 * Changed \dontrun{} to \donttest{} in functions which download data.
 
 
