@@ -1,6 +1,7 @@
 # frenchdata (development version)
 
 * Suppress message when downloading data
+* Fixed an error caused by incorrect detection of file encoding.
 
 # frenchdata 0.2.0
 

@@ -6,8 +6,7 @@
 \alias{frenchdata-package}
 \title{frenchdata: Download Data Sets from Kenneth's French Finance Data Library Site}
 \description{
-Download data sets from Kenneth's French finance data library site <http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html>, reads all the data subsets from the file. Allows R users to collect the data as
-    'tidyverse'-ready data frames.
+Download data sets from Kenneth's French finance data library site \url{http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html}, reads all the data subsets from the file. Allows R users to collect the data as 'tidyverse'-ready data frames.
 }
 \seealso{
 Useful links:
